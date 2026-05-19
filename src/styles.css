@@ -1,0 +1,123 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --font-display: "Playfair Display", serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+:root {
+  --radius: 1rem;
+  --background: oklch(0.18 0.08 265);
+  --foreground: oklch(0.98 0.01 90);
+  --card: oklch(0.24 0.10 265);
+  --card-foreground: oklch(0.98 0.01 90);
+  --popover: oklch(0.24 0.10 265);
+  --popover-foreground: oklch(0.98 0.01 90);
+  --primary: oklch(0.82 0.16 85);
+  --primary-foreground: oklch(0.20 0.08 265);
+  --secondary: oklch(0.30 0.12 265);
+  --secondary-foreground: oklch(0.98 0.01 90);
+  --muted: oklch(0.28 0.08 265);
+  --muted-foreground: oklch(0.78 0.04 260);
+  --accent: oklch(0.72 0.18 210);
+  --accent-foreground: oklch(0.18 0.08 265);
+  --destructive: oklch(0.62 0.24 27);
+  --destructive-foreground: oklch(0.98 0.01 90);
+  --success: oklch(0.72 0.18 145);
+  --border: oklch(0.40 0.12 265);
+  --input: oklch(0.30 0.10 265);
+  --ring: oklch(0.82 0.16 85);
+  --gradient-hero: radial-gradient(ellipse at top, oklch(0.32 0.16 250), oklch(0.16 0.08 265) 60%, oklch(0.12 0.06 270));
+  --gradient-gold: linear-gradient(135deg, oklch(0.88 0.17 85), oklch(0.72 0.18 60));
+  --gradient-card: linear-gradient(160deg, oklch(0.26 0.11 265), oklch(0.20 0.09 270));
+  --shadow-glow: 0 0 40px oklch(0.82 0.16 85 / 0.5);
+  --shadow-card: 0 20px 50px -10px oklch(0.08 0.06 265 / 0.7);
+  --shadow-accent: 0 0 30px oklch(0.72 0.18 210 / 0.55);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  body {
+    background: var(--gradient-hero);
+    background-attachment: fixed;
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    min-height: 100vh;
+  }
+  h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.02em; }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .bg-gradient-gold { background: var(--gradient-gold); }
+  .bg-gradient-card { background: var(--gradient-card); }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+  .shadow-card { box-shadow: var(--shadow-card); }
+  .shadow-accent { box-shadow: var(--shadow-accent); }
+
+  .glow-ring {
+    box-shadow: 0 0 0 3px var(--primary), 0 0 30px var(--primary);
+    animation: pulse-glow 1.2s ease-in-out infinite;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 3px var(--primary), 0 0 20px var(--primary); }
+  50% { box-shadow: 0 0 0 5px var(--primary), 0 0 50px var(--primary); }
+}
+@keyframes float-in {
+  from { opacity: 0; transform: translateY(20px) scale(0.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-8px); }
+  75% { transform: translateX(8px); }
+}
+@keyframes confetti-pop {
+  0% { transform: scale(0) rotate(0deg); opacity: 0; }
+  50% { transform: scale(1.2) rotate(180deg); opacity: 1; }
+  100% { transform: scale(1) rotate(360deg); opacity: 1; }
+}
+@keyframes spotlight {
+  0%, 100% { opacity: 0.3; transform: translateX(-30%) skewX(-20deg); }
+  50% { opacity: 0.8; transform: translateX(130%) skewX(-20deg); }
+}
+.animate-float-in { animation: float-in 0.5s ease-out both; }
+.animate-shake { animation: shake 0.4s ease-in-out; }
+.animate-confetti { animation: confetti-pop 0.8s ease-out both; }

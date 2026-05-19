@@ -1,0 +1,38 @@
+{
+  "facile": [
+    { "q": "Quelle est la capitale de la France ?", "choices": ["Paris", "Lyon", "Marseille", "Toulouse"], "answer": 0 },
+    { "q": "Combien de continents y a-t-il ?", "choices": ["5", "6", "7", "8"], "answer": 2 },
+    { "q": "Quelle couleur obtient-on en mélangeant le bleu et le jaune ?", "choices": ["Vert", "Orange", "Violet", "Rouge"], "answer": 0 },
+    { "q": "Quel animal est le roi de la jungle ?", "choices": ["Tigre", "Lion", "Éléphant", "Gorille"], "answer": 1 },
+    { "q": "Combien de jours dans une année non bissextile ?", "choices": ["364", "365", "366", "360"], "answer": 1 },
+    { "q": "Quelle planète est la plus proche du Soleil ?", "choices": ["Vénus", "Terre", "Mercure", "Mars"], "answer": 2 },
+    { "q": "Quel est le plus grand océan du monde ?", "choices": ["Atlantique", "Indien", "Arctique", "Pacifique"], "answer": 3 },
+    { "q": "Combien de joueurs dans une équipe de football ?", "choices": ["9", "10", "11", "12"], "answer": 2 },
+    { "q": "Quelle langue parle-t-on au Brésil ?", "choices": ["Espagnol", "Portugais", "Français", "Anglais"], "answer": 1 },
+    { "q": "Quel fruit est jaune et courbé ?", "choices": ["Pomme", "Banane", "Orange", "Raisin"], "answer": 1 }
+  ],
+  "moyen": [
+    { "q": "Qui a peint la Joconde ?", "choices": ["Van Gogh", "Picasso", "Léonard de Vinci", "Monet"], "answer": 2 },
+    { "q": "En quelle année l'homme a-t-il marché sur la Lune ?", "choices": ["1965", "1969", "1972", "1975"], "answer": 1 },
+    { "q": "Quel est le symbole chimique de l'or ?", "choices": ["Or", "Au", "Ag", "Go"], "answer": 1 },
+    { "q": "Quelle est la monnaie du Japon ?", "choices": ["Yuan", "Won", "Yen", "Dollar"], "answer": 2 },
+    { "q": "Combien de côtés a un hexagone ?", "choices": ["5", "6", "7", "8"], "answer": 1 },
+    { "q": "Qui a écrit « Les Misérables » ?", "choices": ["Zola", "Hugo", "Balzac", "Flaubert"], "answer": 1 },
+    { "q": "Quel est le plus long fleuve du monde ?", "choices": ["Amazone", "Nil", "Yangtsé", "Mississippi"], "answer": 1 },
+    { "q": "Quelle est la capitale de l'Australie ?", "choices": ["Sydney", "Melbourne", "Canberra", "Perth"], "answer": 2 },
+    { "q": "Combien de touches sur un piano standard ?", "choices": ["76", "88", "92", "100"], "answer": 1 },
+    { "q": "Quel élément a le symbole « O » ?", "choices": ["Or", "Osmium", "Oxygène", "Olivine"], "answer": 2 }
+  ],
+  "difficile": [
+    { "q": "Qui a formulé la théorie de la relativité ?", "choices": ["Newton", "Einstein", "Bohr", "Hawking"], "answer": 1 },
+    { "q": "Quelle est la racine carrée de 169 ?", "choices": ["11", "12", "13", "14"], "answer": 2 },
+    { "q": "En quelle année est tombé le mur de Berlin ?", "choices": ["1987", "1989", "1991", "1993"], "answer": 1 },
+    { "q": "Quel est le plus petit pays du monde ?", "choices": ["Monaco", "Vatican", "Saint-Marin", "Liechtenstein"], "answer": 1 },
+    { "q": "Quel philosophe a écrit « Le Contrat social » ?", "choices": ["Voltaire", "Rousseau", "Montesquieu", "Diderot"], "answer": 1 },
+    { "q": "Quel est l'os le plus long du corps humain ?", "choices": ["Tibia", "Fémur", "Humérus", "Radius"], "answer": 1 },
+    { "q": "Qui a composé « La Flûte enchantée » ?", "choices": ["Beethoven", "Mozart", "Bach", "Chopin"], "answer": 1 },
+    { "q": "Quelle est la vitesse de la lumière (km/s, arrondie) ?", "choices": ["150 000", "300 000", "450 000", "600 000"], "answer": 1 },
+    { "q": "En quelle année a été signée la Magna Carta ?", "choices": ["1066", "1215", "1453", "1492"], "answer": 1 },
+    { "q": "Quel est le métal liquide à température ambiante ?", "choices": ["Plomb", "Mercure", "Étain", "Zinc"], "answer": 1 }
+  ]
+}
